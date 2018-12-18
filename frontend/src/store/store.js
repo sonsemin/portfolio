@@ -15,8 +15,16 @@ export default new Vuex.Store({
     },
     mutations: {
       addCounter: function (state , payload) {
-        state.counter += payload.value;
+        state.counter += payload;
       }
-    }
+    },
+  actions: {
+
+      addCounter: function (context) {
+
+        return context.commit('addCounter' , 10);
+
+      }
+  }
   }
 );

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Parent counter : {{ getCounter  }} <br>
+    Parent counter : {{ getCounter }} <br>
     <button @click="addCounter">+</button>
     <button @click="subCounter">-</button>
 
@@ -11,8 +11,8 @@
 
 <script>
   import Child from './VuexTestChild'
-  import { mapGetters } from 'vuex'
-  import { mapMutations } from 'vuex'
+  import {mapGetters} from 'vuex'
+  import {mapMutations} from 'vuex'
 
   export default {
     name: "VuexTest",
@@ -24,16 +24,24 @@
     // },
     methods: {
       // 이벤트 추가
+    //   ...mapMutations({
+    //     addCounter : 'addCounter'
+    // }),
       addCounter() {
-       this.$store.commit('addCounter' , {value:7 , arr:["a","b"]});
+        this.$store.dispatch('addCounter');
       },
       subCounter() {
         this.$store.state.counter--;
       },
     },
-    computed:mapGetters([
-      'getCounter'
-    ]),
+    computed: {
+      ...mapGetters([
+        'getCounter'
+      ]),
+      test() {
+
+      }
+    },
     components: {
       // Child 컴포넌트를 하위 컴포넌트로 등록
       'child': Child

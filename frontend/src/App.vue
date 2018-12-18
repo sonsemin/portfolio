@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png"><br>
+    <router-link to="/test">test고고고</router-link>
+    <router-link to="/vuextest">vuex테스트</router-link>
+    <router-link to="/userjoin">회원가입</router-link>
     <router-view/>
   </div>
 </template>

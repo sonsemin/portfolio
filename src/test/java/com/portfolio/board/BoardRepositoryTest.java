@@ -19,7 +19,7 @@ public class BoardRepositoryTest {
     public void test(){
         boardRepository.save(Board.builder()
         .title("제목입니다")
-        .user_id("sonsemin")
+        .userId("sonsemin")
         .build());
     }
 }

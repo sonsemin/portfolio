@@ -16,7 +16,7 @@ public class BoardDto {
     public Board toEntity(){
         return Board.builder()
                 .title(title)
-                .user_id(user_id)
+                .userId(user_id)
                 .build();
     }
 }
