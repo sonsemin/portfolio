@@ -12,7 +12,11 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-
+    {
+      path: '/',
+      name: 'Main',
+      component: Main
+    },
     {
       path: '/test',
       name: 'Test',
