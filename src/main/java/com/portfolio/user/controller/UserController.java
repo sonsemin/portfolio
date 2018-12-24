@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * 사용자관련 컨트롤러
+ *
  * @author 손세민
  * @version 1.0.0
  * @since 2018-12-18 오후 11:34
@@ -24,12 +25,12 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/list")
-    public List<UserDto> list(){
+    public List<UserDto> list() {
         return userService.list();
     }
 
-    @RequestMapping(value = "/save",method = RequestMethod.POST)
-    public void save(@RequestBody UserDto dto){
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public void save(@RequestBody UserDto dto) throws Exception {
         userService.save(dto);
     }
 

@@ -14,17 +14,14 @@ export default new Vuex.Store({
       }
     },
     mutations: {
-      addCounter: function (state , payload) {
+      addCounter: function (state, payload) {
         state.counter += payload;
       }
     },
-  actions: {
-
+    actions: {
       addCounter: function (context) {
-
-        return context.commit('addCounter' , 10);
-
+        return context.commit('addCounter', 10);
       }
-  }
+    }
   }
 );
